@@ -19,6 +19,7 @@ const InvestmentForm = (props) => {
 
   const resetHandler = () => {
     setInput(initInput);
+    props.toCalculate(input);
   };
 
   const inputChangeHandler = (input, value) => {

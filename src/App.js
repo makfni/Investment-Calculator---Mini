@@ -9,10 +9,14 @@ function App() {
     setFormData(data);    
   };
 
+  const resetTable = () => {
+    setFormData("");
+  }
+
   return (
     <div>
       <Header />
-      <InvestmentForm toCalculate={userData} />
+      <InvestmentForm toCalculate={userData} resetTable={resetTable}/>
       {!formData && <p style={{textAlign: "center"}}>No investments to calculate.</p>}
       {formData && <InvestmentCalculations data={formData} initInvestment={formData["current-savings"]} />}
     </div>
