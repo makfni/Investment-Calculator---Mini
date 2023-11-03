@@ -25,7 +25,7 @@ const InvestmentForm = (props) => {
     setInput((prevInput) => {
       return {
         ...prevInput,
-        [input]: value,
+        [input]: +value,
       };
     });
   };
